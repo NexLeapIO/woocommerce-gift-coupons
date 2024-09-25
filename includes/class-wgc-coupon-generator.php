@@ -40,7 +40,7 @@ class WGV_Coupon_Generator {
         return $wpdb->insert_id;
     }
 
-    public static function get__all_coupons() {
+    public static function get_all_coupons() {
         global $wpdb;
 
         $table_name = $wpdb->prefix . 'wgc_coupons';
@@ -50,5 +50,27 @@ class WGV_Coupon_Generator {
         return $results;
     }
 
-    // Additional methods for updating, deleting, and retrieving coupons.
+    public static function get_coupon_by_code($code) {
+        global $wpdb;
+
+        $table_name = $wpdb->prefix . 'wgc_coupons';
+
+        $result = $wpdb->get_row($wpdb->prepare("SELECT * FROM $table_name WHERE code = %s", $code));
+
+        return $result;
+    }
+
+    public static function update_coupon_status($id, $status) {
+        global $wpdb;
+
+        $table_name = $wpdb->prefix . 'wgc_coupons';
+
+        $wpdb->update(
+            $table_name,
+            array('status' => $status),
+            array('id' => $id),
+            array('%s'),
+            array('%d')
+        );
+    }
 }
