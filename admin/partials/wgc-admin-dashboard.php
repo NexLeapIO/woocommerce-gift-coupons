@@ -14,13 +14,13 @@ $coupons = WGC_Coupon_Generator::get_all_coupons();
 
     <!-- Coupon Issue Form -->
     <h2><?php _e('Issue a New Coupon', 'woocommerce-gift-coupons'); ?></h2>
-    <?php include 'wgc-admin-issue-form.php'; ?>
+    <?php include WGC_PLUGIN_DIR . 'admin/partials/wgc-admin-issue-form.php'; ?>
 
     <!-- Coupon Validation Form -->
     <h2><?php _e('Validate a Coupon', 'woocommerce-gift-coupons'); ?></h2>
-    <?php include 'wgc-admin-validate-form.php'; ?>
+    <?php include WGC_PLUGIN_DIR . 'admin/partials/wgc-admin-validate-form.php'; ?>
 
     <!-- Coupon Table -->
     <h2><?php _e('Issued Coupons', 'woocommerce-gift-coupons'); ?></h2>
-    <?php include 'wgc-admin-coupons-table.php'; ?>
+    <?php include WGC_PLUGIN_DIR . 'admin/partials/wgc-admin-coupons-table.php'; ?>
 </div>

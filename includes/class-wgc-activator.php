@@ -28,6 +28,3 @@ class WGC_Activator {
         dbDelta($sql);
     }
 }
-
-// Register the activation hook.
-register_activation_hook(__FILE__, array('WGC_Activator', 'activate'));

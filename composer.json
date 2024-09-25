@@ -1,0 +1,16 @@
+{
+    "name": "jairm/woocommerce-gift-coupons",
+    "autoload": {
+        "psr-4": {
+            "Jairm\\WoocommerceGiftCoupons\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "NexLeap"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^6.1"
+    }
+}
