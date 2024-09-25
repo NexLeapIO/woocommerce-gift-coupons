@@ -26,7 +26,16 @@ class WGC_Email_Handler {
         $attachments = array($pdf_path);
 
         // Send email.
-        wp_mail($to, $subject, $message, $headers, $attachments);
+        $email_sent = wp_mail($to, $subject, $message, $headers, $attachments);
+
+        if ($email_sent) {
+            WGC_Logger::log('Email sent successfully to ' . $to);
+        } else {
+            WGC_Logger::log('Failed to send email to ' . $to);
+
+            // Send admin notification.
+            wp_mail(get_option('admin_email'), 'Coupon email failed', 'Failed to coupon email to ' . $to);
+        }
 
         // Delete temporary file.
         unlink($pdf_path);
