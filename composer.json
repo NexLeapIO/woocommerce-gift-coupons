@@ -1,8 +1,8 @@
 {
     "name": "jairm/woocommerce-gift-coupons",
-    "autoload": {
-        "psr-4": {
-            "Jairm\\WoocommerceGiftCoupons\\": "src/"
+    "config": {
+        "platform": {
+            "php": "8.2.0"
         }
     },
     "authors": [
@@ -11,6 +11,6 @@
         }
     ],
     "require": {
-        "mpdf/mpdf": "^6.1"
+        "mpdf/mpdf": "^8.2"
     }
 }

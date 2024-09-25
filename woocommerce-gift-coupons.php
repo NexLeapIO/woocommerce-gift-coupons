@@ -21,6 +21,11 @@ define('WGC_VERSION', '1.0.0');
 define('WGC_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('WGC_PLUGIN_URL', plugin_dir_url(__FILE__));
 
+// Include the Composer autoloader.
+if (file_exists(WGC_PLUGIN_DIR . 'vendor/autoload.php')) {
+    require_once WGC_PLUGIN_DIR . 'vendor/autoload.php';
+}
+
 // Include the activator class.
 if (file_exists(WGC_PLUGIN_DIR . 'includes/class-wgc-activator.php')) {
     require_once WGC_PLUGIN_DIR . 'includes/class-wgc-activator.php';

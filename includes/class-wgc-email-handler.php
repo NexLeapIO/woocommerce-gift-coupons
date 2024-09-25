@@ -42,7 +42,6 @@ class WGC_Email_Handler {
     }
 
     private static function generate_pdf($data) {
-        // Include the Composer autoloader.
         if (!class_exists('Mpdf\Mpdf')) {
             require_once WGC_PLUGIN_DIR . 'vendor/autoload.php';
         }
@@ -53,7 +52,7 @@ class WGC_Email_Handler {
         $html = ob_get_clean();
 
         // Generate PDF.
-        $mpdf = new Mpdf\Mpdf();
+        $mpdf = new \Mpdf\Mpdf();
         $mpdf->WriteHTML($html);
         return $mpdf->Output('', 'S');
     }

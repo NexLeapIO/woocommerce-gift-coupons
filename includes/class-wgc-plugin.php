@@ -22,6 +22,9 @@ class WGC_Plugin {
         // Include admin class.
         require_once WGC_PLUGIN_DIR . 'admin/class-wgc-admin.php';
 
+        // Include logger class.
+        require_once WGC_PLUGIN_DIR . 'includes/class-wgc-logger.php';
+
         // Include coupon generator class.
         require_once WGC_PLUGIN_DIR . 'includes/class-wgc-coupon-generator.php';
 
@@ -30,9 +33,6 @@ class WGC_Plugin {
     
         // Include order handler class.
         require_once WGC_PLUGIN_DIR . 'includes/class-wgc-order-handler.php';
-
-        // Include logger class.
-        require_once WGC_PLUGIN_DIR . 'includes/class-wgc-logger.php';
     }
 
     private function init_admin() {
