@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-class WGV_Plugin {
+class WGC_Plugin {
     public function __constructor() {
         // Load dependencies.
         $this->load_dependencies();
