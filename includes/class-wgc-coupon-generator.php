@@ -4,14 +4,14 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-class WGV_Coupon_Generator {
+class WGC_Coupon_Generator {
     private static $charset = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
     public static function generate_unique_code($length = 8) {
-        $code = '';
         $charset_length = strlen(self::$charset);
 
         do {
+            $code = '';
             for ($i = 0; $i < $length; $i++) {
                 $code .= self::$charset[wp_rand(0, $charset_length - 1)];
             }
