@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 class WGC_Plugin {
-    public function __constructor() {
+    public function __construct() {
         // Load dependencies.
         $this->load_dependencies();
 
@@ -30,6 +30,9 @@ class WGC_Plugin {
     
         // Include order handler class.
         require_once WGC_PLUGIN_DIR . 'includes/class-wgc-order-handler.php';
+
+        // Include logger class.
+        require_once WGC_PLUGIN_DIR . 'includes/class-wgc-logger.php';
     }
 
     private function init_admin() {

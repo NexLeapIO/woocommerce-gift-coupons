@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 class WGC_Admin {
-    public function __constructor() {
+    public function __construct() {
         // Add admin menu.
         add_action('admin_menu', array($this, 'add_admin_menu'));
 
