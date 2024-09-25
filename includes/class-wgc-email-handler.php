@@ -5,14 +5,14 @@ if (!defined('ABSPATH')) {
 }
 
 class WGC_Email_Handler {
-    public state function send_coupon_email($data) {
+    public static function send_coupon_email($data) {
         // Prepare email content.
         $to = $data['receiver_email'];
         $subject = __('You have received a gift coupon!', 'woocommerce-gift-coupons');
         $message = __('Please find your gift coupon attached to this email.', 'woocommerce-gift-coupons');
 
         // Generate PDF.
-        $pdf_content self::generate_pdf($data);
+        $pdf_content = self::generate_pdf($data);
 
         // Create temporary file.
         $upload_dir = wp_upload_dir();
