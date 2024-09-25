@@ -20,7 +20,7 @@ class WGC_Activator {
             issue_date datetime NOT NULL,
             expiry_date datetime NOT NULL,
             status varchar(20) NOT NULL DEFAULT 'Not Used',
-            PRIMARY KEY  (id)
+            PRIMARY KEY  (id),
             UNIQUE KEY code (code)
         ) $charset_collate;";
 
