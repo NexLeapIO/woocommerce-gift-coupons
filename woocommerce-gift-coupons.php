@@ -31,3 +31,11 @@ function wgc_initialize_plugin() {
     $plugin = new WGC_Plugin();
 }
 add_action('plugins_loaded', 'wgc_initialize_plugin');
+
+// Include the activator class.
+if (file_exists(WGC_PLUGIN_DIR . 'includes/class-wgc-activator.php')) {
+    require_once WGC_PLUGIN_DIR . 'includes/class-wgc-activator.php';
+}
+
+// Register the activation hook.
+register_activation_hook(__FILE__, array('WGC_Activator', 'activate'));
