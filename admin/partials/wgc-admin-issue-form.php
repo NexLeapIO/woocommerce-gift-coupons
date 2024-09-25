@@ -13,7 +13,7 @@ if (isset($_POST['wgc_issue_coupon']) && check_admin_referer('wgc_issue_coupon_a
     foreach ($products_ids as $product_id) {
         $code = WGC_Coupon_Generator::generate_unique_code();
 
-        data = array(
+        $data = array(
             'code' => $code,
             'product_id' => $product_id,
             'receiver_name' => $receiver_name,
