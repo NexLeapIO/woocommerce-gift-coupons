@@ -27,6 +27,9 @@ class WGV_Plugin {
 
         // Include email handler class.
         require_once WGC_PLUGIN_DIR . 'includes/class-wgc-email-handler.php';
+    
+        // Include order handler class.
+        require_once WGC_PLUGIN_DIR . 'includes/class-wgc-order-handler.php';
     }
 
     private function init_admin() {
