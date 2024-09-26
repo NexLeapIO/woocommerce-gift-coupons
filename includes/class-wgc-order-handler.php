@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 class WGC_Order_Handler {
-    public function __constructor() {
+    public function __construct() {
         add_action('woocommerce_order_status_completed', array($this, 'handle_order_completion'));
     }
 
