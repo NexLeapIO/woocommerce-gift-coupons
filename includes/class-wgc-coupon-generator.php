@@ -72,19 +72,19 @@ class WGC_Coupon_Generator {
             array('%s'),
             array('%d')
         );
+    }
 
-        public static function delete_coupon($id) {
-            global $wpdb;
+    public static function delete_coupon($id) {
+        global $wpdb;
 
-            $table_name = $wpdb->prefix . 'wgc_coupons';
+        $table_name = $wpdb->prefix . 'wgc_coupons';
 
-            $wpdb->delete(
-                $table_name,
-                array('id' => $id),
-                array('%d')
-            );
+        $wpdb->delete(
+            $table_name,
+            array('id' => $id),
+            array('%d')
+        );
 
-            return $wpdb->rows_affected;
-        }
+        return $wpdb->rows_affected;
     }
 }
