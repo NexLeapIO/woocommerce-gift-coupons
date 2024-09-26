@@ -19,7 +19,7 @@ if (isset($_POST['wgc_issue_coupon']) && check_admin_referer('wgc_issue_coupon_a
             'receiver_name' => $receiver_name,
             'receiver_email' => $receiver_email,
             'issue_date' => current_time('mysql'),
-            'expiry_date' => date('Y-m-d H:i:s', strtotime('+6 months')),
+            'expiry_date' => date('Y-m-d', strtotime('+6 months')),
             'status' => 'Not Used'
         );
 
